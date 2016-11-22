@@ -12,20 +12,15 @@ html {
 h1, h2, p, ul, ol, h3{
     color: rgb(0, 0, 0);
 }
-h1, h2, h3{
-    background-color: rgba(0, 0, 0, 0.6);
-    }
 p{
     margin: auto;
     word-wrap: break-word;
-    background-color: rgba(0, 0, 0, 0.6);
     width: 80%;
     font-size:18px;
     padding: 10px;
 }
 ul, ol {
     font-size:20px;   
-    background-color: rgba(0, 0, 0, 0.6);
 }
 .page-content {
     width: 60vw;
