@@ -13,9 +13,6 @@ h1, h2, p, ul, ol, h3{
     color: rgb(0, 0, 0);
     background-color: rgb(0, 0, 0, 0.6);
 }
-body{
-background-color: rgb(255, 255, 255);
-}
 p{
     margin: auto;
     word-wrap: break-word;
