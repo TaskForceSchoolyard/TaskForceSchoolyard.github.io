@@ -10,7 +10,7 @@ html {
     font-family: sans-serif;
 }
 h1, h2, p, ul, ol, h3{
-    color: rgb(0,200, 255);
+    color: rgb(0, 0, 0);
 }
 h1, h2, h3{
     background-color: rgba(0, 0, 0, 0.6);
