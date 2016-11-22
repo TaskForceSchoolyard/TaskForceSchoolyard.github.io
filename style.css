@@ -1,7 +1,7 @@
 body,
 html {
     background-color: #000;
-    background: url("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiendKJi7vQAhUM9YMKHdfeBkUQjRwIBw&url=http%3A%2F%2Fmarimbaheart.deviantart.com%2Fart%2FBlue-Gradient-Background-314004524&psig=AFQjCNFG_Aj1g5IUFs5F33qBQNHj9sItEw&ust=1479860153725463");
+    background: url("http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/08/Cool-Background-3.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -11,23 +11,25 @@ html {
 }
 h1, h2, p, ul, ol, h3{
     color: rgb(0, 0, 0);
-    background-color: rgb(0, 0, 0, 0.6);
 }
+h1, h2, h3{
+    background-color: rgba(0, 0, 0, 0.6);
+    }
 p{
     margin: auto;
     word-wrap: break-word;
+    background-color: rgba(0, 0, 0, 0.6);
     width: 80%;
     font-size:18px;
     padding: 10px;
 }
 ul, ol {
-    font-size:20px; 
-    background-color: rgb(0, 0, 0, 0.6);
+    font-size:20px;   
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .page-content {
     width: 60vw;
     margin: 0 auto;
-    background-color: rgb(0, 0, 0, 0.6);
 }
 .spacer {
     width: 100%;
