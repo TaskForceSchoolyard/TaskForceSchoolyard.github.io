@@ -2,7 +2,6 @@ body,
 html {
     background-color: #000;
     background: url("http://il9.picdn.net/shutterstock/videos/13505777/thumb/1.jpg");
-    background-size: cover;
     background-attachment: fixed;
     margin: 0;
     opacity: 1;
