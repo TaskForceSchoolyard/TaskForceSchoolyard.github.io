@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="jquery-3.1.1.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+  </head>
+  <body style="background:#444;">
+    <svg height="250" width="100%" class="header-svg">
+      <polygon id="poly" style="fill:#5E5;"/>
+      <polygon id="polyg" style="fill:#2B2;"/>
+      <use id="use" xlink:href="#poly" />
+      Sorry, your browser does not support inline SVG.
+    </svg>
+
+    <a class="cursor" id="profile-link" href="#"><img id="profile-pic" class="member-picture" src="Images/UnknownProfile.png" /></a>
+
+    <h1 style="color:#222;font-family:'Avenir',sans-serif;font-size:120px;z-index:80;position:fixed;top:30px;left:10%;margin:0;">SACO</h1>
+
+    <svg height="200vh" width="50%" class="hide-small" style="position:relative;z-index:5;">
+      <polygon id="polygon-side" style="fill:#2B2;"/>
+      <use id="use" xlink:href="#polygon-side" />
+      Sorry, your browser does not support inline SVG.
+    </svg>
+    <img id="profilepic" src="Images/UnknownProfile.png" />
+
+
+    <div class="content prof">
+      <div class="wrapper" style="margin-left:20vw;">
+        <h1 id="name" style="margin:0 10px;float:left;font-size:50px;width:400px;">Joseph Uyemura</h1>
+        <img id="rank" style="margin:0 10px;float:left;width:50px;height:50px;" src="Images/5-stars.png"/>
+        <h1 id="votes" style="margin:0 10px;float:left;font-size:50px;">00</h1>
+
+        <div id="rank-popup" class="popup">
+          Rank
+        </div>
+
+        <br>
+        <div style="background:#FFF;height:1px;width:50vw;margin-top:40px;"></div>
+        <div class="credits">
+          <img id="credits-pic" src="Images/credits.png" />
+          <p id="credits">100</p>
+        </div>
+        <br>
+        <div id="badges">
+
+        </div>
+        <h3 id="positions">Positions: NONE</h3>
+        <br>
+        <p id="bio" style="width:100%;height:800px;background:#333;padding:10px;">This user hasn't written a bio yet!</p>
+        <h3 id="joindate">Joined: 01 JAN 2017</h3>
+      </div>
+    </div>
+
+    <script src="profile-manager.js"></script>
+    <script>
+      var w = $(window);
+      $(".header-svg > #poly").attr("points", "-10,-10 -10,180 " + w.width()/4 + ",250 " + (w.width()+10) + ",100 " + (w.width()+10) + ",-10");
+      $("#profilepic").attr("style", "z-index:4;width:20vw;left:2.5vw;position:absolute;top:" + ((430+w.height()/8)-(w.width()/5)) + "px;");
+      $(".header-svg > #polyg").attr("points", (w.width()-150) + ",-10 " + (w.width()-150) + ",250 " + (w.width()-50) + ",220 " + (w.width()-50) + ",-10");
+      $("#profile-pic").attr("style", "position:fixed;right:65px;top:150px;z-index:55;");
+      $("#polygon-side").attr("points", "-10," + (380+w.height()/8) + " -10," + w.height()*2 + " " + (w.width()/4) + "," + (430+w.height()/8));
+      $("#rank-popup").css("left", $("#rank").position().left);
+      $(document).on('scroll load', function() {
+          $(".wrapper").children().each(function(index) {
+            if($(this).attr("id") != "rank-popup") {
+              $(this).css({"transition": "opacity 1s","opacity": 1});
+              if((($(document).scrollTop()+250) > ($(this).offset().top)) && $(this).attr("id") != "bio") {
+                $(this).css({"opacity": 0});
+              } else if((($(document).scrollTop()+250) > ($(this).offset().top+$(this).height())) && $(this).attr("id") == "bio") {
+                $(this).css({"opacity": 0});
+              } else {
+                $(this).css({"opacity": 1});
+              }
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

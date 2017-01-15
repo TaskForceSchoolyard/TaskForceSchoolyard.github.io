@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up | SACO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="jquery-3.1.1.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+  </head>
+  <body>
+    <div class="row" style="margin-top:100px;">
+      <div class="col-3 col-md-1"></div>
+      <div class="col-6 col-md-10">
+        <h1 style="text-align:center;width:100%;">Sign Up to SACO</h1>
+        <label for="name">Name: </label><br>
+        <input id="name" style="width:100%;" class="input" type="text" placeholder="John Doe"></input>
+        <br>
+        <br>
+        <label for="email">Email: </label><br>
+        <input id="email" style="width:100%;" class="input" type="text" placeholder="you@yourbusiness.com"></input>
+        <br>
+        <br>
+        <label for="password">Password: </label><br>
+        <input id="password" style="width:100%;" class="input" type="password"></input>
+        <br>
+        <br>
+
+        <input id="signup" class="submit-button cursor" type="submit" value="Sign Up" onclick="signup()"></input>
+
+        <br>
+        <br>
+
+        <p>Already have an account?  <a href="file:///Users/josephuyemura/Documents/SACO/sign-in.html">Sign In</a>.</p>
+      </div>
+    <div class="col-3 col-md-1"></div>
+    </div>
+
+    <script src="sign-up.js"></script>
+  </body>
+</html>
